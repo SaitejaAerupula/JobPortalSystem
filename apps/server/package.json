@@ -2,11 +2,11 @@
   "name": "@jobportal/server",
   "version": "1.0.0",
   "private": true,
-  "main": "dist/server.js",
+  "main": "dist/src/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "DATABASE_URL=${DATABASE_URL:-'postgresql://postgres:postgres@localhost:5432/jobportal?schema=public'} prisma generate && tsc -p tsconfig.json",
-    "start": "node dist/server.js",
+    "start": "node dist/src/server.js",
     "lint": "echo 'lint not configured yet'",
     "test": "vitest run",
     "test:watch": "vitest",
