@@ -1,0 +1,2809 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 4993
+>>
+stream
+0.200025 w
+0 G
+BT
+/F2 18 Tf
+20.6999999999999993 TL
+0 g
+48. 785.8899999999999864 Td
+(Job Portal System - Full Project Documentation) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 746.8899999999999864 Td
+(1. Project Overview) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 727.8899999999999864 Td
+(The Job Portal System is a full-stack, role-based hiring platform designed as a production-style project) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 713.8899999999999864 Td
+(with advanced intelligence features for candidate-job matching, recruiter decision support, and admin) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 699.8899999999999864 Td
+(observability.) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 673.8899999999999864 Td
+(Objectives) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 658.8899999999999864 Td
+(- Provide end-to-end hiring workflows for candidate, recruiter, and admin roles.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 644.8899999999999864 Td
+(- Deliver resume-aware recommendations and ATS-like scoring.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 630.8899999999999864 Td
+(- Add explainable and fairness-aware ranking for recruiter shortlisting.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 616.8899999999999864 Td
+(- Support publication-oriented evaluation with baselines, ablation, and fairness metrics.) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 590.8899999999999864 Td
+(Roles) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 575.8899999999999864 Td
+(- `CANDIDATE`: profile/resume management, recommendations, applications, eligibility, learning path,) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 561.8899999999999864 Td
+(interview readiness.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 547.8899999999999864 Td
+(- `RECRUITER`: job posting management, incoming application handling, copilot ranking, trust/safety) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 533.8899999999999864 Td
+(checks.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 519.8899999999999864 Td
+(- `ADMIN`: users/jobs moderation, application analytics, observability, research evaluation snapshots.) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 491.8899999999999864 Td
+(2. Technology Stack) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 472.8899999999999864 Td
+(- Frontend: React + TypeScript + Vite \(`apps/web`\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 458.8899999999999864 Td
+(- Backend: Node.js + Express + TypeScript \(`apps/server`\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 444.8899999999999864 Td
+(- Database: PostgreSQL + Prisma ORM) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 430.8899999999999864 Td
+(- Authentication: JWT access/refresh tokens with rotation/revocation) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 416.8899999999999864 Td
+(- Real-time/Queue: Socket.IO + BullMQ/Redis fallback handling) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 402.8899999999999864 Td
+(- Validation/Security: Zod, Helmet, CORS, rate limiting) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 388.8899999999999864 Td
+(- Testing: Vitest + Supertest \(server\)) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 360.8899999999999864 Td
+(3. Repository Structure) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 333.8899999999999864 Td
+(```txt) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 319.8899999999999864 Td
+(JobPortalSystem/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 305.8899999999999864 Td
+(apps/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 291.8899999999999864 Td
+(server/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 277.8899999999999864 Td
+(prisma/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 263.8899999999999864 Td
+(src/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 249.8899999999999864 Td
+(config/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 235.8899999999999864 Td
+(constants/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 221.8899999999999864 Td
+(middlewares/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 207.8899999999999864 Td
+(modules/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 193.8899999999999864 Td
+(admin/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 179.8899999999999864 Td
+(applications/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 165.8899999999999864 Td
+(auth/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 151.8899999999999864 Td
+(candidates/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 137.8899999999999864 Td
+(companies/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 123.8899999999999864 Td
+(jobs/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 109.8899999999999864 Td
+(notifications/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 95.8899999999999864 Td
+(recruiters/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 81.8899999999999864 Td
+(users/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 67.8899999999999864 Td
+(observability/) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 5223
+>>
+stream
+0.200025 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 789.8899999999999864 Td
+(queue/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 775.8899999999999864 Td
+(utils/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 761.8899999999999864 Td
+(tests/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 747.8899999999999864 Td
+(web/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 733.8899999999999864 Td
+(src/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 719.8899999999999864 Td
+(api/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 705.8899999999999864 Td
+(styles/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 691.8899999999999864 Td
+(types/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 677.8899999999999864 Td
+(App.tsx) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 663.8899999999999864 Td
+(data/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 649.8899999999999864 Td
+(evaluation-sample.csv) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 635.8899999999999864 Td
+(docs/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 621.8899999999999864 Td
+(api/openapi.yaml) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 607.8899999999999864 Td
+(FULL_PROJECT_DOCUMENTATION.md) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 593.8899999999999864 Td
+(ieee-paper-outline.md) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 579.8899999999999864 Td
+(novelty-claim-and-contributions.md) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 565.8899999999999864 Td
+(experimental-results-template.md) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 551.8899999999999864 Td
+(scripts/) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 537.8899999999999864 Td
+(eval.ts) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 523.8899999999999864 Td
+(docker-compose.yml) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 509.8899999999999864 Td
+(package.json) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 495.8899999999999864 Td
+(```) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 467.8899999999999864 Td
+(4. System Architecture) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 436.8899999999999864 Td
+(4.1 High-Level Flow) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 421.8899999999999864 Td
+(1. User authenticates and receives access/refresh tokens.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 407.8899999999999864 Td
+(2. Frontend calls REST APIs under `/api/v1/*` with bearer token.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 393.8899999999999864 Td
+(3. Express routes execute validation, RBAC checks, business logic, and Prisma queries.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 379.8899999999999864 Td
+(4. Notifications are created and optionally pushed asynchronously.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 365.8899999999999864 Td
+(5. Frontend renders role-specific dashboard sections.) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 339.8899999999999864 Td
+(4.2 Key Runtime Components) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 324.8899999999999864 Td
+(- `apps/server/src/app.ts`: middleware stack + route registration.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 310.8899999999999864 Td
+(- `apps/server/src/server.ts`: HTTP server, socket initialization, queue initialization.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 296.8899999999999864 Td
+(- `apps/server/src/config/prisma.ts`: Prisma client singleton.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 282.8899999999999864 Td
+(- `apps/server/src/config/socket.ts`: Socket.IO setup and user room joins.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 268.8899999999999864 Td
+(- `apps/server/src/queue/notification-queue.ts`: BullMQ worker/queue with in-process fallback.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 254.8899999999999864 Td
+(- `apps/server/src/observability/metrics.ts`: in-memory route metrics collector.) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 226.8899999999999864 Td
+(5. Database Design) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 207.8899999999999864 Td
+(The Prisma schema includes:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 193.8899999999999864 Td
+(- Core entities: `User`, `CandidateProfile`, `RecruiterProfile`, `Company`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 179.8899999999999864 Td
+(- Hiring entities: `Job`, `Application`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 165.8899999999999864 Td
+(- Messaging/session entities: `Notification`, `RefreshToken`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 151.8899999999999864 Td
+(- Enums: `Role`, `JobType`, `ExperienceLevel`, `WorkMode`, `JobStatus`, `ApplicationStatus`,) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 137.8899999999999864 Td
+(`NotificationType`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 115.8899999999999864 Td
+(Notable constraints:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 101.8899999999999864 Td
+(- Unique email for `User`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 87.8899999999999864 Td
+(- One candidate/recruiter profile per user) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 73.8899999999999864 Td
+(- Unique application constraint on `\(jobId, candidateId\)`) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 4952
+>>
+stream
+0.200025 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 789.8899999999999864 Td
+(- Indexed frequently queried fields \(status, role, createdAt, etc.\)) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 761.8899999999999864 Td
+(6. Backend Modules) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 730.8899999999999864 Td
+(6.1 Auth \(`/api/v1/auth`\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 715.8899999999999864 Td
+(Main capabilities:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 701.8899999999999864 Td
+(- Register candidate/recruiter) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 687.8899999999999864 Td
+(- Login with JWT token pair) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 673.8899999999999864 Td
+(- Refresh token rotation) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 659.8899999999999864 Td
+(- Logout and logout-all) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 645.8899999999999864 Td
+(- `me` endpoint for current user profile) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 623.8899999999999864 Td
+(Security controls:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 609.8899999999999864 Td
+(- Strong password validation via Zod) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 595.8899999999999864 Td
+(- Refresh token hashing \(`sha256`\) in DB) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 581.8899999999999864 Td
+(- Revocation map for rotated/logged-out refresh tokens) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 555.8899999999999864 Td
+(6.2 Candidates \(`/api/v1/candidates`\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 540.8899999999999864 Td
+(Main capabilities:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 526.8899999999999864 Td
+(- Candidate profile CRUD \(self\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 512.8899999999999864 Td
+(- Resume upload \(`multipart/form-data`\) and parsing) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 498.8899999999999864 Td
+(- Resume analysis and role suggestions) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 484.8899999999999864 Td
+(- Skill-gap roadmap generation) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 470.8899999999999864 Td
+(- Job eligibility reporting with ATS-style thresholds) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 456.8899999999999864 Td
+(- Auto-apply to top eligible jobs) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 442.8899999999999864 Td
+(- Adaptive learning path generation) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 428.8899999999999864 Td
+(- Interview readiness report) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 414.8899999999999864 Td
+(- Candidate application listing) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 388.8899999999999864 Td
+(6.3 Jobs \(`/api/v1/jobs`\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 373.8899999999999864 Td
+(Main capabilities:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 359.8899999999999864 Td
+(- Public open jobs listing with filters) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 345.8899999999999864 Td
+(- Recruiter job create/update/delete and status updates) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 331.8899999999999864 Td
+(- Candidate recommendations based on hybrid score) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 317.8899999999999864 Td
+(- Recruiter copilot ranking with explainability and fairness snapshot) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 303.8899999999999864 Td
+(- Job scam-risk/trust analysis) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 289.8899999999999864 Td
+(- Recruiter/admin viewing applications per job) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 263.8899999999999864 Td
+(6.4 Applications \(`/api/v1/applications`\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 248.8899999999999864 Td
+(Main capabilities:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 234.8899999999999864 Td
+(- Candidate apply to open job) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 220.8899999999999864 Td
+(- ATS score calculation for application) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 206.8899999999999864 Td
+(- Recruiter/admin status updates and notes) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 192.8899999999999864 Td
+(- Candidate withdrawal) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 178.8899999999999864 Td
+(- Notification enqueue on important transitions) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 152.8899999999999864 Td
+(6.5 Notifications \(`/api/v1/notifications`\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 137.8899999999999864 Td
+(Main capabilities:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 123.8899999999999864 Td
+(- List user notifications) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 109.8899999999999864 Td
+(- Mark single notification as read) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 95.8899999999999864 Td
+(- Mark all unread notifications as read) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 5094
+>>
+stream
+0.200025 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 789.8899999999999864 Td
+(Note: backend notifications APIs remain active; notification section has been removed from visible) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 775.8899999999999864 Td
+(frontend output as requested.) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 749.8899999999999864 Td
+(6.6 Admin \(`/api/v1/admin`\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 734.8899999999999864 Td
+(Main capabilities:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 720.8899999999999864 Td
+(- User listing and activation toggle) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 706.8899999999999864 Td
+(- Job listing and deletion) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 692.8899999999999864 Td
+(- Application aggregate stats) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 678.8899999999999864 Td
+(- Observability summary \(slow/error-heavy routes\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 664.8899999999999864 Td
+(- Research evaluation endpoint for publication metrics) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 642.8899999999999864 Td
+(Research endpoint:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 628.8899999999999864 Td
+(- `GET /api/v1/admin/research/evaluation`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 614.8899999999999864 Td
+(- Returns dataset summary, baseline comparison, ablation, fairness comparison, and operational) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 600.8899999999999864 Td
+(metrics.) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 572.8899999999999864 Td
+(7. Frontend Application) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 541.8899999999999864 Td
+(7.1 Entry and API Client) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 526.8899999999999864 Td
+(- Entry: `apps/web/src/main.tsx`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 512.8899999999999864 Td
+(- Root app: `apps/web/src/App.tsx`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 498.8899999999999864 Td
+(- Axios client: `apps/web/src/api/client.ts`) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 472.8899999999999864 Td
+(7.2 UX Behavior) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 457.8899999999999864 Td
+(- Token and user profile persisted in `localStorage`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 443.8899999999999864 Td
+(- Role-based rendering for candidate/recruiter/admin sections) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 429.8899999999999864 Td
+(- Candidate flows: resume upload, recommendations, ATS/eligibility, auto-apply, roadmap, adaptive and) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 415.8899999999999864 Td
+(readiness reports) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 401.8899999999999864 Td
+(- Recruiter flows: open jobs, create job, incoming applications, copilot ranking and scam risk) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 387.8899999999999864 Td
+(- Admin flows: application stats, observability summary, research evaluation snapshot) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 361.8899999999999864 Td
+(7.3 Styling) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 346.8899999999999864 Td
+(- Main stylesheet: `apps/web/src/styles/index.css`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 332.8899999999999864 Td
+(- Responsive grid/card based layout) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 318.8899999999999864 Td
+(- Modal UI for auto-apply confirmation) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 290.8899999999999864 Td
+(8. AI/Intelligence and Scoring Logic) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 259.8899999999999864 Td
+(8.1 Resume and Skill Intelligence) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 244.8899999999999864 Td
+(Implemented in `apps/server/src/modules/candidates/resume-analysis.ts`:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 230.8899999999999864 Td
+(- PDF resume text extraction \(`pdf-parse`\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 216.8899999999999864 Td
+(- Skill extraction via curated keyword map) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 202.8899999999999864 Td
+(- Role suggestions from role-skill mapping) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 188.8899999999999864 Td
+(- Semantic resume-job score using cosine similarity) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 162.8899999999999864 Td
+(8.2 ATS and Eligibility) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 147.8899999999999864 Td
+(Used in applications/candidates routes:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 133.8899999999999864 Td
+(- Weighted score composition \(skills + semantic + experience + profile completeness\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 119.8899999999999864 Td
+(- Eligibility labels \(`HIGH`, `MEDIUM`, `LOW`\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 105.8899999999999864 Td
+(- Eligibility threshold parameterization and auto-apply pipeline) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 79.8899999999999864 Td
+(8.3 Recruiter Copilot) Tj
+ET
+endstream
+endobj
+11 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 12 0 R
+>>
+endobj
+12 0 obj
+<<
+/Length 5039
+>>
+stream
+0.200025 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 789.8899999999999864 Td
+(Implemented in `apps/server/src/modules/jobs/job-insights.ts` and jobs routes:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 775.8899999999999864 Td
+(- Explainable candidate score breakdown) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 761.8899999999999864 Td
+(- Matched/missing skill reporting) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 747.8899999999999864 Td
+(- Fairness snapshot \(selection rates + disparate impact\)) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 721.8899999999999864 Td
+(8.4 Scam-Risk Heuristics) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 706.8899999999999864 Td
+(Signals include:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 692.8899999999999864 Td
+(- suspicious text phrases) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 678.8899999999999864 Td
+(- missing salary fields) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 664.8899999999999864 Td
+(- unrealistic fresher compensation flags) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 650.8899999999999864 Td
+(- low-trust/public-email company domain indicators) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 636.8899999999999864 Td
+(- duplicate posting signals) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 610.8899999999999864 Td
+(8.5 Adaptive Candidate Guidance) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 595.8899999999999864 Td
+(Implemented in `apps/server/src/modules/candidates/adaptive-engine.ts`:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 581.8899999999999864 Td
+(- Priority skill derivation from rejection/trend signals) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 567.8899999999999864 Td
+(- Weekly learning plans and projected success lift) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 553.8899999999999864 Td
+(- Interview readiness MCQ/coding tasks and recommendations) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 525.8899999999999864 Td
+(9. API Summary \(Selected\)) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 494.8899999999999864 Td
+(Public/General) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 479.8899999999999864 Td
+(- `GET /api/v1/health`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 465.8899999999999864 Td
+(- `GET /api/v1/jobs`) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 439.8899999999999864 Td
+(Auth) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 424.8899999999999864 Td
+(- `POST /api/v1/auth/register`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 410.8899999999999864 Td
+(- `POST /api/v1/auth/login`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 396.8899999999999864 Td
+(- `POST /api/v1/auth/refresh-token`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 382.8899999999999864 Td
+(- `POST /api/v1/auth/logout`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 368.8899999999999864 Td
+(- `POST /api/v1/auth/logout-all`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 354.8899999999999864 Td
+(- `GET /api/v1/auth/me`) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 328.8899999999999864 Td
+(Candidate) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 313.8899999999999864 Td
+(- `GET /api/v1/candidates/me`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 299.8899999999999864 Td
+(- `PATCH /api/v1/candidates/me`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 285.8899999999999864 Td
+(- `POST /api/v1/candidates/me/resume`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 271.8899999999999864 Td
+(- `GET /api/v1/candidates/me/resume-analysis`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 257.8899999999999864 Td
+(- `GET /api/v1/candidates/me/skill-gap-roadmap`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 243.8899999999999864 Td
+(- `GET /api/v1/candidates/me/job-eligibility`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 229.8899999999999864 Td
+(- `POST /api/v1/candidates/me/apply-top-eligible`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 215.8899999999999864 Td
+(- `GET /api/v1/candidates/me/adaptive-learning-path`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 201.8899999999999864 Td
+(- `GET /api/v1/candidates/me/interview-readiness`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 187.8899999999999864 Td
+(- `GET /api/v1/candidates/me/applications`) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 161.8899999999999864 Td
+(Jobs) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 146.8899999999999864 Td
+(- `GET /api/v1/jobs/recommendations/me`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 132.8899999999999864 Td
+(- `GET /api/v1/jobs/:jobId`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 118.8899999999999864 Td
+(- `POST /api/v1/jobs`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 104.8899999999999864 Td
+(- `PATCH /api/v1/jobs/:jobId`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 90.8899999999999864 Td
+(- `PATCH /api/v1/jobs/:jobId/status`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 76.8899999999999864 Td
+(- `DELETE /api/v1/jobs/:jobId`) Tj
+ET
+endstream
+endobj
+13 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 14 0 R
+>>
+endobj
+14 0 obj
+<<
+/Length 4771
+>>
+stream
+0.200025 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 789.8899999999999864 Td
+(- `GET /api/v1/jobs/:jobId/copilot-ranking`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 775.8899999999999864 Td
+(- `GET /api/v1/jobs/:jobId/scam-risk`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 761.8899999999999864 Td
+(- `GET /api/v1/jobs/:jobId/applications`) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 735.8899999999999864 Td
+(Applications) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 720.8899999999999864 Td
+(- `POST /api/v1/applications`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 706.8899999999999864 Td
+(- `GET /api/v1/applications/:applicationId`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 692.8899999999999864 Td
+(- `GET /api/v1/applications/:applicationId/ats-score`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 678.8899999999999864 Td
+(- `PATCH /api/v1/applications/:applicationId/status`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 664.8899999999999864 Td
+(- `PATCH /api/v1/applications/:applicationId/notes`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 650.8899999999999864 Td
+(- `DELETE /api/v1/applications/:applicationId`) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 624.8899999999999864 Td
+(Admin) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 609.8899999999999864 Td
+(- `GET /api/v1/admin/users`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 595.8899999999999864 Td
+(- `PATCH /api/v1/admin/users/:userId/status`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 581.8899999999999864 Td
+(- `GET /api/v1/admin/jobs`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 567.8899999999999864 Td
+(- `DELETE /api/v1/admin/jobs/:jobId`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 553.8899999999999864 Td
+(- `GET /api/v1/admin/applications/stats`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 539.8899999999999864 Td
+(- `GET /api/v1/admin/observability/summary`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 525.8899999999999864 Td
+(- `GET /api/v1/admin/research/evaluation`) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 499.8899999999999864 Td
+(Notifications) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 484.8899999999999864 Td
+(- `GET /api/v1/notifications`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 470.8899999999999864 Td
+(- `PATCH /api/v1/notifications/:id/read`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 456.8899999999999864 Td
+(- `PATCH /api/v1/notifications/read-all`) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 428.8899999999999864 Td
+(10. Security and Reliability) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 409.8899999999999864 Td
+(- JWT auth + RBAC middleware \(`requireAuth`, `requireRole`\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 395.8899999999999864 Td
+(- Request body validation \(Zod\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 381.8899999999999864 Td
+(- Helmet security headers) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 367.8899999999999864 Td
+(- CORS policy via `CLIENT_ORIGIN`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 353.8899999999999864 Td
+(- API rate limiting under `/api`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 339.8899999999999864 Td
+(- Centralized error handler with Prisma error mapping) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 325.8899999999999864 Td
+(- Request IDs and route-level telemetry) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 297.8899999999999864 Td
+(11. Real-Time and Queue Behavior) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 278.8899999999999864 Td
+(- Socket users join `user:<id>` rooms.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 264.8899999999999864 Td
+(- Notification enqueue supports Redis-backed BullMQ worker.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 250.8899999999999864 Td
+(- If Redis is unavailable, fallback writes notification in-process.) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 222.8899999999999864 Td
+(12. Setup and Run Guide) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 191.8899999999999864 Td
+(12.1 Prerequisites) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 176.8899999999999864 Td
+(- Node.js \(18+\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 162.8899999999999864 Td
+(- npm) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 148.8899999999999864 Td
+(- Docker \(for local Postgres\)) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 122.8899999999999864 Td
+(12.2 Install and Configure) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 107.8899999999999864 Td
+(```bash) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 93.8899999999999864 Td
+(npm install) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 79.8899999999999864 Td
+(docker compose up -d) Tj
+ET
+endstream
+endobj
+15 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 16 0 R
+>>
+endobj
+16 0 obj
+<<
+/Length 4404
+>>
+stream
+0.200025 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 789.8899999999999864 Td
+(cp apps/server/.env.example apps/server/.env) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 775.8899999999999864 Td
+(cp apps/web/.env.example apps/web/.env) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 761.8899999999999864 Td
+(```) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 735.8899999999999864 Td
+(12.3 Database Bootstrap) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 720.8899999999999864 Td
+(```bash) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 706.8899999999999864 Td
+(npm run prisma:generate) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 692.8899999999999864 Td
+(npm run prisma:migrate) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 678.8899999999999864 Td
+(npm run prisma:seed) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 664.8899999999999864 Td
+(```) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 638.8899999999999864 Td
+(12.4 Run) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 623.8899999999999864 Td
+(```bash) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 609.8899999999999864 Td
+(npm run dev) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 595.8899999999999864 Td
+(```) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 569.8899999999999864 Td
+(12.5 Verify) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 554.8899999999999864 Td
+(```bash) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 540.8899999999999864 Td
+(npm run build) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 526.8899999999999864 Td
+(npm run test) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 512.8899999999999864 Td
+(curl -i http://localhost:4000/api/v1/health) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 498.8899999999999864 Td
+(```) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 472.8899999999999864 Td
+(12.6 Access) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 457.8899999999999864 Td
+(- Web: `http://localhost:5173`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 443.8899999999999864 Td
+(- API: `http://localhost:4000/api/v1`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 421.8899999999999864 Td
+(Seed accounts:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 407.8899999999999864 Td
+(- Admin: `admin@jobportal.com` / `Admin@123`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 393.8899999999999864 Td
+(- Recruiter: `recruiter@jobportal.com` / `Recruiter@123`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 379.8899999999999864 Td
+(- Candidate: `candidate@jobportal.com` / `Candidate@123`) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 351.8899999999999864 Td
+(13. Research and IEEE Artifacts) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 320.8899999999999864 Td
+(Included Files) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 305.8899999999999864 Td
+(- `docs/ieee-paper-outline.md`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 291.8899999999999864 Td
+(- `docs/novelty-claim-and-contributions.md`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 277.8899999999999864 Td
+(- `docs/experimental-results-template.md`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 263.8899999999999864 Td
+(- `scripts/eval.ts`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 249.8899999999999864 Td
+(- `data/evaluation-sample.csv`) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+48. 223.8899999999999864 Td
+(Evaluation Script) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 208.8899999999999864 Td
+(```bash) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 194.8899999999999864 Td
+(npx tsx scripts/eval.ts) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 180.8899999999999864 Td
+(```) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 166.8899999999999864 Td
+(Optional custom dataset path:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 152.8899999999999864 Td
+(```bash) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 138.8899999999999864 Td
+(npx tsx scripts/eval.ts /absolute/or/relative/path/to/file.csv) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 124.8899999999999864 Td
+(```) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 102.8899999999999864 Td
+(Expected output structure:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 88.8899999999999864 Td
+(- dataset summary) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 74.8899999999999864 Td
+(- baseline comparison \(`keyword`, `skill`, `hybrid`\)) Tj
+ET
+endstream
+endobj
+17 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 18 0 R
+>>
+endobj
+18 0 obj
+<<
+/Length 4499
+>>
+stream
+0.200025 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 789.8899999999999864 Td
+(- ablation \(`hybridNoSemantic`\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 775.8899999999999864 Td
+(- fairness comparison \(disparate impact ratios\)) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 747.8899999999999864 Td
+(14. Testing and CI) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 728.8899999999999864 Td
+(- Server tests located under `apps/server/tests`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 714.8899999999999864 Td
+(- Current suite includes:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 700.8899999999999864 Td
+(- health endpoint test) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 686.8899999999999864 Td
+(- auth validation tests) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 672.8899999999999864 Td
+(- CI workflow exists at `.github/workflows/ci.yml`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 658.8899999999999864 Td
+(- Build and tests are intended to run in CI.) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 630.8899999999999864 Td
+(15. Environment Variables) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 611.8899999999999864 Td
+(`apps/server/.env.example`:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 597.8899999999999864 Td
+(- `PORT`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 583.8899999999999864 Td
+(- `NODE_ENV`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 569.8899999999999864 Td
+(- `DATABASE_URL`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 555.8899999999999864 Td
+(- `JWT_ACCESS_SECRET`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 541.8899999999999864 Td
+(- `JWT_REFRESH_SECRET`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 527.8899999999999864 Td
+(- `JWT_ACCESS_EXPIRES_IN`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 513.8899999999999864 Td
+(- `JWT_REFRESH_EXPIRES_IN`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 499.8899999999999864 Td
+(- `REDIS_URL`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 485.8899999999999864 Td
+(- `CLIENT_ORIGIN`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 471.8899999999999864 Td
+(- `RATE_LIMIT_WINDOW_MS`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 457.8899999999999864 Td
+(- `RATE_LIMIT_MAX`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 435.8899999999999864 Td
+(`apps/web/.env.example`:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 421.8899999999999864 Td
+(- `VITE_API_BASE_URL`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 407.8899999999999864 Td
+(- `VITE_SOCKET_URL`) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 379.8899999999999864 Td
+(16. Known Notes and Limitations) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 360.8899999999999864 Td
+(- `docs/api/openapi.yaml` is concise and not fully exhaustive yet.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 346.8899999999999864 Td
+(- Research metrics currently use lightweight heuristics and sample dataset; real publication should use) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 332.8899999999999864 Td
+(larger anonymized datasets and reproducible split logs.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 318.8899999999999864 Td
+(- Current tests are foundational and should be expanded for edge/security/performance coverage.) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+48. 290.8899999999999864 Td
+(17. Suggested Next Improvements) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 271.8899999999999864 Td
+(- Expand OpenAPI coverage for all routes and schemas.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 257.8899999999999864 Td
+(- Add integration tests for candidate/recruiter/admin critical paths.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 243.8899999999999864 Td
+(- Add database-backed fairness audit snapshots and scheduled reports.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 229.8899999999999864 Td
+(- Add dashboard export for publication-ready tables/figures.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 215.8899999999999864 Td
+(- Introduce role-specific UI pages/components for maintainability beyond monolithic root app.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 193.8899999999999864 Td
+(---) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 179.8899999999999864 Td
+(This document is the comprehensive single-file technical reference for the current implementation state) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+48. 165.8899999999999864 Td
+(of Job Portal System.) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R ]
+/Count 8
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+21 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+22 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+23 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+24 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+25 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+26 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+27 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+28 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+29 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+30 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+31 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+32 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 19 0 R
+/F2 20 0 R
+/F3 21 0 R
+/F4 22 0 R
+/F5 23 0 R
+/F6 24 0 R
+/F7 25 0 R
+/F8 26 0 R
+/F9 27 0 R
+/F10 28 0 R
+/F11 29 0 R
+/F12 30 0 R
+/F13 31 0 R
+/F14 32 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+33 0 obj
+<<
+/Producer (jsPDF 2.5.2)
+/CreationDate (D:20260308145234-00'00')
+>>
+endobj
+34 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 35
+0000000000 65535 f 
+0000040516 00000 n 
+0000042384 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000005197 00000 n 
+0000005334 00000 n 
+0000010609 00000 n 
+0000010746 00000 n 
+0000015750 00000 n 
+0000015888 00000 n 
+0000021035 00000 n 
+0000021174 00000 n 
+0000026266 00000 n 
+0000026405 00000 n 
+0000031229 00000 n 
+0000031368 00000 n 
+0000035825 00000 n 
+0000035964 00000 n 
+0000040619 00000 n 
+0000040745 00000 n 
+0000040876 00000 n 
+0000041010 00000 n 
+0000041148 00000 n 
+0000041272 00000 n 
+0000041401 00000 n 
+0000041533 00000 n 
+0000041669 00000 n 
+0000041797 00000 n 
+0000041924 00000 n 
+0000042053 00000 n 
+0000042186 00000 n 
+0000042288 00000 n 
+0000042637 00000 n 
+0000042723 00000 n 
+trailer
+<<
+/Size 35
+/Root 34 0 R
+/Info 33 0 R
+/ID [ <6541594AF092AA8DFC0C7EB5E7314B21> <6541594AF092AA8DFC0C7EB5E7314B21> ]
+>>
+startxref
+42827
+%%EOF
