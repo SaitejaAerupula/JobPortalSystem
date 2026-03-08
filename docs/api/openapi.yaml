@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: Job Portal System API
+  version: 1.0.0
+servers:
+  - url: http://localhost:4000/api/v1
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: Service is healthy
+  /auth/register:
+    post:
+      summary: Register candidate or recruiter
+      responses:
+        '201':
+          description: Registered
+  /auth/login:
+    post:
+      summary: Login and receive tokens
+      responses:
+        '200':
+          description: Authenticated
+  /jobs:
+    get:
+      summary: List open jobs
+      responses:
+        '200':
+          description: Jobs returned
+    post:
+      summary: Create a job (recruiter)
+      security:
+        - bearerAuth: []
+      responses:
+        '201':
+          description: Job created
+  /applications:
+    post:
+      summary: Apply to a job (candidate)
+      security:
+        - bearerAuth: []
+      responses:
+        '201':
+          description: Application created
+  /notifications:
+    get:
+      summary: List current user notifications
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Notifications returned
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

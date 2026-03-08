@@ -1,0 +1,20 @@
+{
+  "name": "job-portal-system",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @jobportal/server & npm run dev -w @jobportal/web",
+    "dev:server": "npm run dev -w @jobportal/server",
+    "dev:web": "npm run dev -w @jobportal/web",
+    "build": "npm run build --workspaces",
+    "lint": "npm run lint --workspaces",
+    "test": "npm run test -w @jobportal/server",
+    "prisma:generate": "npm run prisma:generate -w @jobportal/server",
+    "prisma:migrate": "npm run prisma:migrate -w @jobportal/server",
+    "prisma:seed": "npm run prisma:seed -w @jobportal/server"
+  }
+}

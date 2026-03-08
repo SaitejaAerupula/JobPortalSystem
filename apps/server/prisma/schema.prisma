@@ -1,0 +1,217 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  CANDIDATE
+  RECRUITER
+  ADMIN
+}
+
+enum JobType {
+  FULL_TIME
+  PART_TIME
+  INTERNSHIP
+  CONTRACT
+}
+
+enum ExperienceLevel {
+  FRESHER
+  JUNIOR
+  MID
+  SENIOR
+  LEAD
+}
+
+enum WorkMode {
+  ONSITE
+  REMOTE
+  HYBRID
+}
+
+enum JobStatus {
+  DRAFT
+  OPEN
+  CLOSED
+}
+
+enum ApplicationStatus {
+  APPLIED
+  UNDER_REVIEW
+  SHORTLISTED
+  INTERVIEW_SCHEDULED
+  REJECTED
+  HIRED
+}
+
+enum NotificationType {
+  APPLICATION_STATUS
+  NEW_APPLICATION
+  SYSTEM
+}
+
+model User {
+  id              String            @id @default(cuid())
+  fullName        String
+  email           String            @unique
+  passwordHash    String
+  role            Role
+  isEmailVerified Boolean           @default(false)
+  isActive        Boolean           @default(true)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+
+  candidate       CandidateProfile?
+  recruiter       RecruiterProfile?
+
+  notifications   Notification[]
+  refreshTokens   RefreshToken[]
+
+  @@index([role])
+  @@index([createdAt])
+}
+
+model CandidateProfile {
+  id              String           @id @default(cuid())
+  userId          String           @unique
+  headline        String?
+  bio             String?
+  skills          String[]
+  experienceYears Int              @default(0)
+  location        String?
+  resumeUrl       String?
+  linkedInUrl     String?
+  githubUrl       String?
+  portfolioUrl    String?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  applications    Application[]
+
+  @@index([location])
+}
+
+model Company {
+  id              String           @id @default(cuid())
+  name            String
+  website         String?
+  description     String?
+  logoUrl         String?
+  location        String?
+  size            String?
+  industry        String?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  recruiters      RecruiterProfile[]
+  jobs            Job[]
+
+  @@unique([name])
+  @@index([industry])
+}
+
+model RecruiterProfile {
+  id              String           @id @default(cuid())
+  userId          String           @unique
+  companyId       String
+  designation     String?
+  phone           String?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  company         Company          @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  jobs            Job[]
+
+  @@index([companyId])
+}
+
+model Job {
+  id              String           @id @default(cuid())
+  title           String
+  description     String
+  skillsRequired  String[]
+  minSalary       Int?
+  maxSalary       Int?
+  currency        String           @default("INR")
+  location        String
+  workMode        WorkMode
+  jobType         JobType
+  experienceLevel ExperienceLevel
+  openings        Int              @default(1)
+  status          JobStatus        @default(DRAFT)
+  expiresAt       DateTime?
+  companyId       String
+  recruiterId     String
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  company         Company          @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  recruiter       RecruiterProfile @relation(fields: [recruiterId], references: [id], onDelete: Cascade)
+  applications    Application[]
+
+  @@index([companyId])
+  @@index([recruiterId])
+  @@index([status])
+  @@index([location])
+  @@index([jobType])
+  @@index([workMode])
+  @@index([experienceLevel])
+  @@index([createdAt])
+}
+
+model Application {
+  id              String            @id @default(cuid())
+  jobId           String
+  candidateId     String
+  coverLetter     String?
+  status          ApplicationStatus @default(APPLIED)
+  recruiterNotes  String?
+  appliedAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+
+  job             Job               @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  candidate       CandidateProfile  @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+
+  @@unique([jobId, candidateId])
+  @@index([jobId])
+  @@index([candidateId])
+  @@index([status])
+  @@index([appliedAt])
+}
+
+model Notification {
+  id              String           @id @default(cuid())
+  userId          String
+  type            NotificationType
+  title           String
+  message         String
+  isRead          Boolean          @default(false)
+  metadata        Json?
+  createdAt       DateTime         @default(now())
+
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([isRead])
+  @@index([createdAt])
+}
+
+model RefreshToken {
+  id              String           @id @default(cuid())
+  userId          String
+  tokenHash       String           @unique
+  expiresAt       DateTime
+  createdAt       DateTime         @default(now())
+
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
